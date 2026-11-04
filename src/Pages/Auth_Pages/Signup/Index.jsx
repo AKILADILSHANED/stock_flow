@@ -1,8 +1,11 @@
 import React from 'react'
+import { SignUp } from '@clerk/react'
 
 function Signup() {
   return (
-    <div>Signup</div>
+    <div className='flex flex-col items-center justify-center h-screen'>
+      <SignUp/>
+    </div>
   )
 }
 
