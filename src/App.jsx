@@ -1,7 +1,7 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom"
 import { Routings } from "./Data/Routing"
 import Not_Found from "./Pages/Auth_Pages/Not_Found/Index"
-import { Clerk_Provider } from '../Providers/Clerk_Provider'
+import { Clerk_Provider } from '../Providers/Clerk_Provider/Index'
 
 
 function App() {
@@ -10,13 +10,16 @@ function App() {
     <BrowserRouter>
       <Clerk_Provider>
         <Routes>
-          {
-            Routings.map((element) => {
-              return (
-                <Route key={element.path} path={element.path} element={element.element} />
-              )
-            })
-          }
+          <Route>
+            {
+              Routings.map((element) => {
+                return (
+                  <Route key={element.path} path={element.path}
+                    element={element.element} />
+                )
+              })
+            }
+          </Route>
           <Route path="*" element={<Not_Found />} />
         </Routes>
       </Clerk_Provider>

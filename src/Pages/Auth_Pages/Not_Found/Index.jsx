@@ -4,7 +4,7 @@ function Not_Found() {
     const navigation = useNavigate();
 
     const back_to_login = () => {
-        navigation("/");
+        navigation("/Sign-in");
     }
 
     return (

@@ -9,11 +9,11 @@ function Clerk_Provider({ children }) {
             publishableKey={pulishable_key}
             routerPush={(to) => { navigate(to) }}
             routerReplace={(to) => { navigate(to, { replace: true }) }}
-            signInUrl='/'
-            signUpUrl='/signup'
-            signInFallbackRedirectUrl="/Dashboard"
-            signUpFallbackRedirectUrl="/"
-            afterSignOutUrl="/"
+            signInUrl='/Sign-in'
+            signUpUrl='/Sign-up'
+            signInFallbackRedirectUrl='/Continue'
+            signUpFallbackRedirectUrl='/Sign-in'
+            afterSignOutUrl='/Sign-in'
         >
             {children}
         </ClerkProvider>
